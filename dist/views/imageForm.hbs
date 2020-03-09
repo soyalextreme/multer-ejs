@@ -1,0 +1,49 @@
+{{> title }}
+<div class="container">
+    <div class="level">
+        <div class="level-item has-center-text marginTopS">
+            <div class="card">
+                <header class="card-header">
+                    <p class="card-header-title">
+                        Adding Image
+                    </p>
+                    <div type="submit" class="card-header-icon is-primary">
+                        <span class="icon">
+                            <i class="fas fa-plus"></i>
+                        </span>
+                    </div>
+                </header>
+                <form action="/image/add" method="POST" enctype="multipart/form-data">
+                    <div class="control paddingAllSmall">
+                        <input class="input is-primary is-rounded" type="text" name="title" placeholder="Title">
+                        <textarea class="textarea marginTopS is-primary" name="description"
+                            placeholder="Add a Description"></textarea>
+                        <div class="file has-name is-boxed marginTopS">
+                            <label class="file-label">
+                                <input class="file-input" type="file" name="images">
+                                <span class="file-cta">
+                                    <span class="file-icon">
+                                        <i class="fas fa-upload"></i>
+                                    </span>
+                                    <span class="file-label">
+                                        Choose a file…
+                                    </span>
+                            </label>
+                        </div>
+                        <button class="button is-primary" type="submit">Add Image</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .marginTopS {
+        margin-top: 3;
+    }
+
+    .paddingAllSmall {
+        padding: 3rem;
+    }
+</style>
